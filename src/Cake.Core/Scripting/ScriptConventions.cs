@@ -164,7 +164,7 @@ namespace Cake.Core.Scripting
         private static string[] GetCakeAssemblyNames()
         {
 #if NETCORE
-            return new[] { "Cake.Core.dll", "Cake.Common.dll" };
+            return new[] { "Cake.Core.dll", "Cake.Common.dll", "Harbor.Core.dll" };
 #else
             return new[] { "Cake.Core.dll", "Cake.Common.dll", "Cake.exe" };
 #endif
