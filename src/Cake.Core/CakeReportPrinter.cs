@@ -54,7 +54,7 @@ namespace Cake.Core
 
                 // Write header.
                 _console.WriteLine();
-                _console.WriteLine(lineFormat, "Task", "Duration");
+                _console.WriteLine(lineFormat, "任务", "时间");
                 _console.WriteLine(new string('-', 20 + maxTaskNameLength));
 
                 // Write task status.
@@ -70,7 +70,7 @@ namespace Cake.Core
                 // Write footer.
                 _console.ForegroundColor = ConsoleColor.Green;
                 _console.WriteLine(new string('-', 20 + maxTaskNameLength));
-                _console.WriteLine(lineFormat, "Total:", FormatTime(GetTotalTime(report)));
+                _console.WriteLine(lineFormat, "总计:", FormatTime(GetTotalTime(report)));
             }
             finally
             {
@@ -92,7 +92,7 @@ namespace Cake.Core
         {
             if (item.ExecutionStatus == CakeTaskExecutionStatus.Skipped)
             {
-                return "Skipped";
+                return "已跳过";
             }
 
             return FormatTime(item.Duration);
